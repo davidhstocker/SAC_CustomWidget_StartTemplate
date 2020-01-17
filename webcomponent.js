@@ -11,7 +11,7 @@
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
+			shadowRoot.appendChild(tmpl.content.cloneNode(true));
 		}
 
         //Fired when the widget is added to the html DOM of the page
