@@ -38,13 +38,11 @@
         onCustomWidgetDestroy(){
         
         }
-
         
         //When the custom widget is resized on the canvas, the Custom Widget SDK framework executes the following JavaScript function call on the custom widget
         onCustomWidgetResize(width, height){
         
         }
-
 
         redraw(
 
