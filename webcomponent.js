@@ -17,7 +17,7 @@
 
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
-            //If you have default property values in your metadata .json, we recommend commenting out this code and calling redraw() from onCustomWidgetAfterUpdate()
+            this._firstConnection = true;
             this.redraw();
         }
 
@@ -33,8 +33,9 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            //If you have default property values in your metadata .json, we recommend uncommenting this and calling redraw() from here, instead of connectedCallback()
-            //this.redraw();
+            if (this._firstConnection){
+                this.redraw();
+            }
         }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
